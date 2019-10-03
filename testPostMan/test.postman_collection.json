@@ -1,0 +1,10 @@
+{
+	"info": {
+		"_postman_id": "c219de4e-3677-491d-8771-5daf28f27acb",
+		"name": "test",
+		"description": "test deservicios  rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [],
+	"protocolProfileBehavior": {}
+}
