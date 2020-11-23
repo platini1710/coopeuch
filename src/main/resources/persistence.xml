@@ -1,16 +1,20 @@
-<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
-  <persistence-unit name="cpJpaPu" transaction-type="RESOURCE_LOCAL">
-    <provider>org.hibernate.ejb.HibernatePersistence</provider>
-    <class>com.tienda.retail.model.Productos</class>
-
-    <class>com.tienda.retail.model.ProductosDetalle</class>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+                      http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+  version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+  
+  <persistence-unit name="test" transaction-type="RESOURCE_LOCAL">
+    <class>com.test.jpa.Student</class>
     <properties>
-      <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
-      <property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver"/>
-      <property name="hibernate.show_sql" value="false"/>
-      <property name="hibernate.connection.username" value="hr"/>
-      <property name="hibernate.connection.password" value="admin"/>
-      <property name="hibernate.connection.url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+      <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+      <property name="javax.persistence.jdbc.url"    value="jdbc:h2:mem:test" />
+      <property name="javax.persistence.jdbc.user" value="sa" />
+      <property name="javax.persistence.jdbc.password" value="" />
+      
+      <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+      <property name="hibernate.hbm2ddl.auto" value="create-drop" />
+      <property name="show_sql" value="true"/>
+      <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
     </properties>
   </persistence-unit>
 </persistence>

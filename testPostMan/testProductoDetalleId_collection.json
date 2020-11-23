@@ -1,1 +1,0 @@
-{"producto":{"id":1,"codigoProducto":"100001","nombre":"pantalon","descripcion":"pantalon para adultos extra"},"listProducto":null,"listProductoDetalle":[{"id":{"id":1,"talla":"S","color":"red"},"codigoProductoDetalle":"1","precio":11000,"stock":100}],"msg":"Exitoso"}
