@@ -1,6 +1,6 @@
-package com.nissum.tareas.service;
+package com.bci.tareas.service;
 
-import com.nissum.tareas.model.Usuario;
+import com.bci.tareas.model.Usuario;
 
 public interface ConsultaUsuarioService {
 

@@ -1,4 +1,4 @@
-package com.nissum.tareas.model;
+package com.bci.tareas.model;
 
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;

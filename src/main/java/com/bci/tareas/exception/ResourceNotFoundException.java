@@ -1,4 +1,4 @@
-package com.nissum.tareas.exception;
+package com.bci.tareas.exception;
 
 
 import org.springframework.http.HttpStatus;

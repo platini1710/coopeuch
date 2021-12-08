@@ -1,4 +1,4 @@
-package com.nissum.tareas.DTO;
+package com.bci.tareas.DTO;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;

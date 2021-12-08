@@ -1,4 +1,4 @@
-package com.nissum.tareas.exception;
+package com.bci.tareas.exception;
 
 public class ResourceFoundException extends Exception {
 

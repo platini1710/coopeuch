@@ -1,4 +1,4 @@
-package com.nissum.tareas.service;
+package com.bci.tareas.service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -7,7 +7,7 @@ import javax.persistence.TypedQuery;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.nissum.tareas.model.Usuario;
+import com.bci.tareas.model.Usuario;
 
 
 @Component 

@@ -1,4 +1,4 @@
-package com.nissum.tareas.configuration;
+package com.bci.tareas.configuration;
 
 
 

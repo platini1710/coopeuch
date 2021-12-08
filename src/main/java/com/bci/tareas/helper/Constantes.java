@@ -1,4 +1,4 @@
-package com.nissum.tareas.helper;
+package com.bci.tareas.helper;
 
 public class Constantes {
 	  public static final String msgNotFound = "Ragistro no encontrado";

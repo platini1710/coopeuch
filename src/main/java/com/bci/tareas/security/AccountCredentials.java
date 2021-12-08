@@ -1,4 +1,4 @@
-package com.nissum.tareas.security;
+package com.bci.tareas.security;
 
 public class AccountCredentials {
 

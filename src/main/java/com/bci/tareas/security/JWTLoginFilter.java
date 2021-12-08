@@ -1,4 +1,4 @@
-package com.nissum.tareas.security;
+package com.bci.tareas.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.security.authentication.AuthenticationManager;

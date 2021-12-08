@@ -1,4 +1,4 @@
-package com.nissum.tareas.DTO;
+package com.bci.tareas.DTO;
 
 public class PhonesDTO {
 	private long id;

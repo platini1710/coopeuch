@@ -1,4 +1,4 @@
-package com.nissum.tareas.model;
+package com.bci.tareas.model;
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;

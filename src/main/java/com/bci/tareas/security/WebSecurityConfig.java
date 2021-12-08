@@ -1,4 +1,4 @@
-package com.nissum.tareas.security;
+package com.bci.tareas.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;

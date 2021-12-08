@@ -1,4 +1,4 @@
-package com.nissum.tareas.controllers;
+package com.bci.tareas.controllers;
 
 import java.util.Date;
 
@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.nissum.tareas.DTO.PhonesDTO;
-import com.nissum.tareas.DTO.UsuarioDTO;
-import com.nissum.tareas.exception.ResourceNotFoundException;
-import com.nissum.tareas.helper.Constantes;
-import com.nissum.tareas.helper.Respuesta;
-import com.nissum.tareas.model.Usuario;
-import com.nissum.tareas.service.ConsultaUsuarioService;
-import com.nissum.tareas.service.RegistraUsuarioServices;
+import com.bci.tareas.DTO.PhonesDTO;
+import com.bci.tareas.DTO.UsuarioDTO;
+import com.bci.tareas.exception.ResourceNotFoundException;
+import com.bci.tareas.helper.Constantes;
+import com.bci.tareas.helper.Respuesta;
+import com.bci.tareas.model.Usuario;
+import com.bci.tareas.service.ConsultaUsuarioService;
+import com.bci.tareas.service.RegistraUsuarioServices;
 
 import io.swagger.annotations.ApiOperation;
 

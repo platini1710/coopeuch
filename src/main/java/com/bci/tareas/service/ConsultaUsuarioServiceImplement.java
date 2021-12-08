@@ -1,4 +1,4 @@
-package com.nissum.tareas.service;
+package com.bci.tareas.service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -10,8 +10,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Component;
 
-import com.nissum.tareas.controllers.TareaRegistrationController;
-import com.nissum.tareas.model.Usuario;
+import com.bci.tareas.controllers.TareaRegistrationController;
+import com.bci.tareas.model.Usuario;
 
 
 
