@@ -1,5 +1,7 @@
 para ejecutar la aplicacion  java -jar Tareas-1.1.jar
 
+uso la base de dato en memoria  H2
+
 
 para ejecutar el test desde el Postman http://localhost:8080/registro/tareas/saveUsuario
 {
