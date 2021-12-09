@@ -1,7 +1,29 @@
-se debe copiar la carpeta satic en la carpeta  apache-tomcat-8.5.57\webapps
-y tambien se debe copiar el Tareas-1.1 a la misma carpeta
+para ejecutar la aplicacion  java -jar Tareas-1.1.jar
 
-la url de inicio  es http://localhost:8080/Tareas-1.1/index.html
 
-para refresacar a veces es necesario hacer F5
+para ejecutar el test desde el Postman http://localhost:8080/registro/tareas/saveUsuario
+{
+  
+    "name":"Augusto  Espinoza",
+    "email":"eduardos@gmail.com",
+    "password":"secret",
+        "phone":
+        {
 
+        "numero":784566700,
+        "citycode":13,
+        "contrycode":56
+        }
+
+
+}
+
+
+para obtener el token desde el Postman   se debe  colocar la url http://localhost:8080/login
+
+
+ {
+
+    "username":"admin",
+     "password":"admin"
+}

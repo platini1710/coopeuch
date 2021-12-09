@@ -7,6 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -15,43 +16,46 @@ import org.springframework.web.context.WebApplicationContext;
 import com.bci.tareas.model.Usuario;
 import com.bci.tareas.service.ConsultaUsuarioService;
 import com.bci.tareas.service.RegistraUsuarioServices;
+
+import io.swagger.annotations.ApiOperation;
+
 import static org.mockito.ArgumentMatchers.any;
 @SpringBootTest
 public class ApplicationTests {
+	
+	@Autowired
+	private RegistraUsuarioServices registraUsuario;
 
 
-	@Mock
-	private RegistraUsuarioServices registraUsuarioServices;
-	@Mock
+
 	private ConsultaUsuarioService consultaUsuarioService;
-    @Mock
-    private WebApplicationContext wac;
-    @InjectMocks
 
 
+
+    @MockBean
     private RegistraUsuarioServices repository;
 
-    @Test
-    @DisplayName("Test findById Success")
-    void testFindById() {
-        // Setup our mock repository
-    	Usuario user=new Usuario();
-    	user.setId(0);
-    	user.setEmail("carlos@gmail.com");
-    	user.setName("asas");
-    	user.setPassword("sss");
-    	user.setToken("sss");
-    	doReturn(user).when.registraUsuarioServices.save(any());
-    	 Usuario returnedUsuario = consultaUsuarioService.findUsuario("asas");
-    	 
-    	 
+	@ApiOperation(value = "testea si el guardad funciona ", notes = "Return Integer ")
+	@Test
+	@DisplayName("gurdado exitosamente")
+	void testFindById() {
+		// Setup our mock repository
+		Usuario user = new Usuario();
+		user.setId(0);
+		user.setEmail("carlos@gmail.com");
+		user.setName("asas");
+		user.setPassword("sss");
+		user.setToken("sss");
+		RegistraUsuarioServices registraUsuarioServices = Mockito.mock(RegistraUsuarioServices.class);
+		doReturn(user).when(registraUsuarioServices).save(any());
 
+		Usuario returnedUsuario = registraUsuarioServices.save(user);
 
-        // Execute the service call
-  System.out.println(returnedUsuario);
+		// Execute the service call
+		System.out.println(returnedUsuario.getName());
 
-        // Assert the response
+		// Assert the response
 
-        Assertions.assertSame(returnedUsuario.getId(),user.getId());
-    }
+		Assertions.assertNotNull(returnedUsuario);
+	}
 }

@@ -13,6 +13,8 @@ import org.springframework.stereotype.Component;
 import com.bci.tareas.controllers.TareaRegistrationController;
 import com.bci.tareas.model.Usuario;
 
+import io.swagger.annotations.ApiOperation;
+
 
 
 @Component
@@ -21,7 +23,7 @@ public class ConsultaUsuarioServiceImplement implements ConsultaUsuarioService {
 	  @PersistenceContext
 	  EntityManager em; 
 	  
-	
+	  @ApiOperation(value = "validad  si el nombre del usuario existe  ", notes = "Return Usuario ")
 		@Override
 		public Usuario findUsuario(String name) {
 			// TODO Auto-generated method stub
@@ -37,7 +39,7 @@ public class ConsultaUsuarioServiceImplement implements ConsultaUsuarioService {
 
 			return	usuario;
 		}
-
+		  @ApiOperation(value = "validad  si el email existe ", notes = "Return Usuario ")
 		@Override
 		public Usuario findUsuarioEmail(String name,String email) {
 			// TODO Auto-generated method stub
@@ -53,7 +55,8 @@ public class ConsultaUsuarioServiceImplement implements ConsultaUsuarioService {
 
 			return	usuario;
 		}
-		
+		  @ApiOperation(value = "obtiene el maximo id para agregar un nuevo registro", notes = "Return Integer ")
+		  
 		@Override
 		public int findMaxid() {
 			// TODO Auto-generated method stub
