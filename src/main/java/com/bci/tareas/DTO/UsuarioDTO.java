@@ -14,6 +14,10 @@ import javax.persistence.Table;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 
+/**
+ * @author aespi
+ *
+ */
 public class UsuarioDTO {
 
 
@@ -22,6 +26,7 @@ public class UsuarioDTO {
 	private String name;
 	private String email;
 	private String password;
+	private String token;
 	private PhonesDTO phonesDTO;
 
 	private String fechaCreacion;
@@ -52,6 +57,13 @@ public class UsuarioDTO {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	public String getToken() {
+		return token;
+	}
+	public void setToken(String token) {
+		this.token = token;
 	}
 	public String getFechaCreacion() {
 		return fechaCreacion;

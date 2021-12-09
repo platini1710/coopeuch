@@ -27,6 +27,7 @@ public class Usuario {
 	private String name;
 	private String email;
 	private String password;
+	private String token;
 	private Date fecha_creacion;
 	private Date fecha_actualizacion;
 	  @OneToOne(mappedBy="usuario",cascade = CascadeType.ALL)
@@ -64,8 +65,15 @@ public class Usuario {
 	public Phones getPhone() {
 		return phone;
 	}
+	
+	public String getToken() {
+		return token;
+	}
+	public void setToken(String token) {
+		this.token = token;
+	}
 	public void setPhone(Phones phone) {
-		System.out.println(" phone xxx ::" + phone.getId());
+
 		
 		this.phone = phone;
 

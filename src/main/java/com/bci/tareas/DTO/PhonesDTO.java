@@ -4,6 +4,10 @@ public class PhonesDTO {
 	private long id;
 	private int numero;
 	private int citycode;
+	private int contrycode;
+	public PhonesDTO() {
+
+	}
 	public PhonesDTO(long id,int numero,int citycode) {
 		// TODO Auto-generated constructor stub
 		this.id=id;
@@ -28,5 +32,12 @@ public class PhonesDTO {
 	public void setCitycode(int citycode) {
 		this.citycode = citycode;
 	}
+	public int getContrycode() {
+		return contrycode;
+	}
+	public void setContrycode(int contrycode) {
+		this.contrycode = contrycode;
+	}
+	
 
 }
