@@ -1,8 +1,13 @@
-se debe copiar la carpeta satic en la carpeta  apache-tomcat-8.5.57\webapps
-y tambien se debe copiar el Tareas-1.1 a la misma carpeta
+se debe entrar a la carpeta coopeuch
+luego hacer
+- mvn clean
+- mvn package
+- java -jar target/Tareas-1.1.jar
 
-la url de inicio  es http://localhost:8080/Tareas-1.1/index.html
+con  el postman inserta datos, se puede ver los ejemplo en la carpeta testPostman/inseertarDato.json 
+luego ir en navegador a la siguiente URL : http://localhost:8080/
+
+la url de inicio  es http://localhost:8080
 
 para refresacar a veces es necesario hacer F5
 
-dd
