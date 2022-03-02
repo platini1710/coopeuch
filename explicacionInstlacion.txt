@@ -11,3 +11,4 @@ la url de inicio  es http://localhost:8080
 
 para refresacar a veces es necesario hacer F5
 
+APLICACION ECHA EN ANGULAR CLI CON SPRING BOOT
