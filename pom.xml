@@ -8,7 +8,7 @@
 	
 	<artifactId>Tareas</artifactId>
 	<groupId>com.coopeuch.tareas</groupId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<version>1.1</version>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -80,33 +80,26 @@
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-
-					<skip>true</skip>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<configuration>
-
-					<packagingExcludes>
-						WEB-INF/lib/tomcat-*.jar,WEB-INF/lib/jetty-*.jar,WEB-INF/lib/javax-websocket*.jar,WEB-INF/lib/websocket*.jar
-					</packagingExcludes>
-
-					<failOnMissingWebXml>false</failOnMissingWebXml>
-					<archive>
-						<manifest>
-							<addDefaultImplementationEntries>false</addDefaultImplementationEntries>
-						</manifest>
-					</archive>
-				</configuration>
-			</plugin>
-
+		<plugin>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-maven-plugin</artifactId>
+</plugin>
+		
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-jar-plugin</artifactId>
+    <configuration>
+        <archive>
+            <manifest>
+                <addClasspath>true</addClasspath>
+                <classpathPrefix>libs/</classpathPrefix>
+                <mainClass>
+                  com.coopeuch.tareas.SpringBootRest2Application
+            </mainClass>
+            </manifest>
+        </archive>
+    </configuration>
+</plugin>
 		</plugins>
 		<!-- <finalName>${project.artifactId}</finalName> -->
 	</build>
