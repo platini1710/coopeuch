@@ -1,8 +1,12 @@
+hacer con el postManla siguiente URL:
 
+		http://localhost:8080/registro/tareas/delete/{ID}
+		HTTP Method:  DELETE
 
-
+ejemplo
 http://localhost:8080/registro/tareas/delete/102
 
+Resultado
 {
     "msg": "registro borrado exitosamente"
 }

@@ -1,0 +1,33 @@
+
+colocar en el postmand  la siguiente URL:
+
+	http://localhost:8080/registro/tareas/save
+	
+	HTTP Method:  POST
+
+{
+    "id":100,
+	"nombre":"bajar angular",
+	"descripcion":"aplicacion para construir  aplicacion web"
+}
+
+
+{
+    "id":101,
+"nombre":"bajar IDE visual code",
+"descripcion":"herramienta para desarrollar aplicaciones "
+}
+
+{
+    "id":102,
+	"nombre":"bajar librerias",
+	"descripcion":"libreria HTTP"
+}
+
+
+{
+   "id":103,
+	"nombre":"crear componenter",
+	"descripcion":"componentes"
+}
+

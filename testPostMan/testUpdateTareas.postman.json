@@ -1,7 +1,14 @@
+ con el postMan colocar la siguiente: 
+ 
+ 	URL http://localhost:8080/registro/tareas/update
+
+	HTTP Method:  PUT
+
+
+ejemplo con formato json
+
 {
-    "id":101,
+    "id":103,
 "nombre":"saddsasdasda",
 "descripcion":"nueva descripcion"
 }
-
-
