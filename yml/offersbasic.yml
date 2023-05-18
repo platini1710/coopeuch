@@ -1,1 +1,2 @@
-offers.discount=67%
+offers:
+  discount:67%
