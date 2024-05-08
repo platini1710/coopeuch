@@ -34,7 +34,9 @@ public class TareaRetrieveController {
 
 	@ApiOperation(value = "Find todos los productosr", notes = "Return clase Respuesta "
 			+ "resultado en ListProducto maneja su propias excepcion")
-	@RequestMapping(method = RequestMethod.GET, value = "/allProductos")
+	@RequestMapping(method = RequestMethod.GET, value = "/allTareas")
+	@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "Requestor-Type", exposedHeaders = "X-Get-Header")
+
 	@ResponseBody
 	public ArrayList<Tareas> getAllProductos() {
 		logger.info("todo los productos");

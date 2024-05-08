@@ -29,6 +29,8 @@ import io.swagger.annotations.ApiOperation;
 
 @RequestMapping("/registro/tareas")
 @Api(value = "Producto microservice", description = "registra borra y modifica la tabla Producto")
+
+@CrossOrigin(origins = "*") //this line
 public class TareaRegistrationController {
 	@Autowired
 	private RegistraTareasServices registraProductosServices;
@@ -48,13 +50,15 @@ public class TareaRegistrationController {
 	
 	 @ApiOperation(value = "actualiza  un producto de acuerdo  a su  id del producto", notes = "Return clase Respuesta "
 		 		+ " retorna el resultado en campo Msg, primero busca si existe el registro , si no existe manda el respectivo msg " ) 
-	@PutMapping("/update")
+	 @RequestMapping(value = "/update", method = RequestMethod.PUT,
+     produces = MediaType.APPLICATION_JSON_VALUE)
+	
 	public Respuesta updateProducto(@Valid @RequestBody Tareas tarea) {
 		 Respuesta response=new Respuesta();
 		Tareas tareas = consultaTareasService.findTareas(tarea.getId());
 
-		logger.debug("update ");
-		logger.debug("producto " + tareas);
+		logger.info("update ");
+		logger.info("producto " + tareas);
 		try {
 			if (tareas == null) {
 				logger.debug("producto nulo");
@@ -86,6 +90,8 @@ public class TareaRegistrationController {
 	 */
 	 @ApiOperation(value = "guarda un registro de la tarea  en caso de que exista mandara el respectivo msg ", notes = "Return clase Respuesta "
 		 		+ " retorna el resultado en campo Msg " ) 
+		@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "Requestor-Type", exposedHeaders = "X-Get-Header")
+
 		@RequestMapping(value = "/save", method = RequestMethod.POST,
         produces = MediaType.APPLICATION_JSON_VALUE)
 	public Respuesta saveTarea(@Valid @RequestBody Tareas tarea) {
@@ -125,10 +131,16 @@ public class TareaRegistrationController {
 	 */
 	 @ApiOperation(value = "borra un producto de acuerdo  a su  id del producto", notes = "Return clase Respuesta "
 		 		+ " retorna el resultado en campo Msg " ) 
-	@DeleteMapping("/delete/{id}")
-	public Respuesta deleteProducto(@PathVariable(value = "id") Long Id)  {
+
+		@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "Requestor-Type", exposedHeaders = "X-Get-Header")
+
+	 @DeleteMapping("/delete/{id}")
+	public Respuesta deleteProducto(@PathVariable(value = "id") Long id)  {
+		 
+			logger.info("deleteProducto" + id);
+
 		Respuesta response = new Respuesta();
-		Tareas tarea = consultaTareasService.findTareas(Id);
+		Tareas tarea = consultaTareasService.findTareas(id);
 		logger.info("In tarea" + tarea);
 
 		try {
