@@ -29,6 +29,12 @@ public class Tareas {
 	@ApiModelProperty(value = "descripcion de la tarea , no es null", required = true)
     @Column(name = "descripcion", nullable = false)
     private String descripcion;
+	
+    @Column(name = "fcreated", nullable = true)
+    private String created;
+    @Column(name = "isactive",columnDefinition = "boolean  default true", nullable = true )
+    private boolean  isActive;
+
 	public Long getId() {
 		return id;
 	}
@@ -47,6 +53,18 @@ public class Tareas {
 	}
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
+	}
+	public String getCreated() {
+		return created;
+	}
+	public void setCreated(String created) {
+		this.created = created;
+	}
+	public boolean getActive() {
+		return isActive;
+	}
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
 	}
 	@Override
 	public String toString() {

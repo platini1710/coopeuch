@@ -1,5 +1,8 @@
 package com.coopeuch.tareas.service;
 
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
@@ -13,24 +16,27 @@ import com.coopeuch.tareas.model.Tareas;
 public class RegistraTareasServicesImpl implements  RegistraTareasServices{
 	  @PersistenceContext
 	  EntityManager entityManager; 
-	  
+		DateTimeFormatter ZDT_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss a z");
 	@Transactional  
 	@Override
-	public void save(Tareas producto) {
+	public void save(Tareas tarea) {
 		// TODO Auto-generated method stub
-		  entityManager.persist(producto);
+		  entityManager.persist(tarea);
 	}
 	@Transactional
 	@Override
-	public void update(Tareas producto) {
+	public void update(Tareas tarea) {
 		// TODO Auto-generated method stub
-		  entityManager.persist(producto);
+		String str = ZDT_FORMATTER.format(ZonedDateTime.now());
+		tarea.setCreated(str);
+		tarea.setActive(true);
+		  entityManager.persist(tarea);
 	}
     @Transactional
 	@Override
-	public void delete(Tareas producto) {
+	public void delete(Tareas tarea) {
 		// TODO Auto-generated method stub
-		  entityManager.remove(producto);
+		  entityManager.remove(tarea);
 	}
 
 
