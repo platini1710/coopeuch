@@ -4,7 +4,7 @@ luego hacer
 - mvn package
 - java -jar target/Tareas-1.1.jar
 
-con  el postman inserta datos, se puede ver los ejemplo en la carpeta testPostman/inseertarDato.json 
+
 luego ir en navegador a la siguiente URL : http://localhost:8081/
 
 la url de inicio  es http://localhost:8081
